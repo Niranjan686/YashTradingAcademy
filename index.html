@@ -241,7 +241,7 @@
 .carousel-caption {
     position: absolute;
     bottom: 15%;
-    left: 50%;
+    left: 25%;
     transform: translateX(-50%);
     width: 80%;
     max-width: 650px;
@@ -340,10 +340,20 @@
 
 @media (max-width: 480px) {
     .carousel-caption {
-        width: 95%;
-        bottom: 5%;
-        padding: 12px;
-    }
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 650px;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    opacity: 1; /* Ensure it starts visible */
+    transition: none !important; /* Remove delayed animations */
+}
+
 
     .carousel-caption h5 {
         font-size: 1.4rem;
@@ -364,6 +374,19 @@
     }
 }
 
+.carousel-caption {
+    animation: fadeInUp 1.5s ease-in-out 0.5s both;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
     </style>
 </head>
